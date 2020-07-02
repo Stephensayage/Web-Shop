@@ -10,7 +10,8 @@ import Login from "./Components/Login"
 import Footer from "./Components/Footer"
 
 export default function App() {
-
+  const API_Public_Key = process.env.REACT_APP_MARVEL_API_KEY
+  console.log(API_Public_Key)
   const hash = '4414c85877df0e1d08fa4332de972f8b'
 
   const [spider, updateSpider] = useState([])
