@@ -1,0 +1,197 @@
+html { 
+  background: url('https://wallpaperset.com/w/full/a/b/4/461717.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+a{
+  text-decoration: none;
+  color: silver
+}
+
+div{
+  display: flex;
+  flex-flow: row wrap;
+}
+.product-ctn{
+  display: flex;
+  flex-flow: row wrap;
+}
+h1, h3{
+  width: 100%;
+}
+img {
+  height: 100px;
+  width: 100px;
+}
+
+button {
+  padding: 4px;
+  margin-left: 10px;
+  height: 35px;
+  width: 65px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px 10px 100px 10px;
+  padding: 10px;
+  background-color: rgba(206, 0, 0, 0.9);
+  border-radius: 3px;
+}
+h1{
+  text-align: center;
+}
+
+
+/* Home page */
+.master-ctn {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 1500px ;
+  margin: 50px auto;
+}
+
+.char-ctn{
+    border: 3px solid rgb(137, 31, 2);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16);
+    position: relative;
+    background-color: rgb(19, 28, 53);
+    opacity: 98%;
+    width: 700px;
+    padding-bottom: 18%;
+    margin-bottom: 8%;
+    margin-right: 5px;
+    height: 100px;
+    box-shadow: 2px 2px 10px black;
+
+}
+
+.char-img-ctn{
+  height: 100px;
+  width: 100px;
+  margin: 0 auto;
+  border: 2px solid silver;
+}
+
+.char-content-ctn {
+display: flex;
+flex-flow: column wrap;
+flex-shrink: 1;
+max-width: inherit;
+box-sizing: border-box;
+overflow-x: auto;
+padding: 20px;
+text-align: center;
+text-transform: uppercase;
+font-size: 12px;
+color: silver;;
+}
+
+.grid-ctn {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  
+  padding: 10px;
+  margin: 0 auto;
+  width: 1200px;
+
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 2px 2px 10px black;
+}
+
+/* Comics component */
+.master-comic-ctn{
+width: 1400px;
+}
+
+.comics-ctn{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 600px;
+  padding: 15px;
+  margin: 25px auto;
+  border: 2px solid black;
+  background-color: antiquewhite;
+  box-shadow: 2px 2px 10px black;
+}
+.comics-btn {
+  background-color: rgb(64, 63, 72);
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  width: 70px;
+  height: 50px;
+  border: 5px solid rgb(0, 0, 176);
+  border-radius: 5px;
+  font-family: 'Merriweather', serif;
+  text-decoration: none;
+}
+
+.comics-btn :focus{
+  outline: none;
+}
+
+.comics-btn :hover {
+border: 5px solid  rgb(227, 0, 0);
+color: rgb(232, 223, 212);
+text-shadow:0px 0px 30px rgb(125, 0, 0);
+-moz-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+-webkit-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+} 
+
+/* cart */
+
+.outer-cart-ctn{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+  height: 800px;
+}
+
+.cart-ctn{
+  display: flex;
+  margin: 0 auto;
+  border: 1px solid black;
+  margin: 10px
+}
+
+.total-ctn{
+  display: block;
+}
+
+/* footer */
+
+.footer {
+  background-color: rgba(206, 0, 0, 0.9);
+  opacity: 90%;
+  font-size: 12px;
+  text-align: center;
+  line-height:24px;
+  width: 100%;
+  margin-top: 100px;
+  }
+  .foot-text{
+    color: black;
+    font-family: 'Merriweather', serif;
+  }
