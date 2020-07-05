@@ -8,7 +8,7 @@ export default function SuperHero(props) {
   return (
     <>
       <div className="grid-ctn">
-        {console.log(props.spider[0])}
+
         {props.spider.map(spider =>
           <>
             <div key={spider.id} className="grid-item">
@@ -18,6 +18,7 @@ export default function SuperHero(props) {
               <div className="char-content-ctn">
                 <span>{spider.name}</span>
                 <span>{spider.description}</span>
+                <span><a href={spider.urls[0].url}>More Info</a></span>
               </div>
               <Link to={`/comics/${spider.id}`}><button className="comics-btn">View Comics</button></Link>
             </div>

@@ -6,16 +6,21 @@ html {
   background-size: cover;
 }
 
+ #root body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 
 a{
   text-decoration: none;
   color: silver
 }
 
-div{
+/* div{
   display: flex;
   flex-flow: row wrap;
-}
+} */
 .product-ctn{
   display: flex;
   flex-flow: row wrap;
@@ -23,10 +28,7 @@ div{
 h1, h3{
   width: 100%;
 }
-img {
-  height: 100px;
-  width: 100px;
-}
+
 
 button {
   padding: 4px;
@@ -34,7 +36,7 @@ button {
   height: 35px;
   width: 65px;
 }
-
+/* Header */
 header{
   display: flex;
   justify-content: space-between;
@@ -43,11 +45,67 @@ header{
   padding: 10px;
   background-color: rgba(206, 0, 0, 0.9);
   border-radius: 3px;
-}
-h1{
-  text-align: center;
+} 
+.comics-title{
+  text-align: center ;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 3px;
+  color: silver;
 }
 
+/* ----------------------------- */
+.header{
+  margin: 10px auto;
+  width: 100%;
+  height: 100px;
+  display: block;
+  background-color: rgba(206, 0, 0, 0.9);
+}
+.inner-header{
+  width: 1000px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.logo-ctn{
+  height: 100%;
+  display: table;
+  float: left;
+}
+.logo{
+  height: 100px;
+  width: 100px;
+}
+.site-title{
+  font-family: 'Bangers', cursive;
+  width: 500px;
+  font-size: 50px;
+  letter-spacing: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.navigation{
+  float: right;
+}
+.navigation li{
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0 20px;
+}
+.navigation li:last-child{
+  padding-right: 0;
+}
+
+.navigation li a{ 
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* --------------------------------- */
 
 /* Home page */
 .master-ctn {
@@ -75,10 +133,16 @@ h1{
 }
 
 .char-img-ctn{
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   margin: 0 auto;
   border: 2px solid silver;
+  box-shadow: 2px 2px 10px black;
+}
+
+.char-img{
+  height: 150px;
+  width: 150px;
 }
 
 .char-content-ctn {
@@ -92,7 +156,9 @@ padding: 20px;
 text-align: center;
 text-transform: uppercase;
 font-size: 12px;
-color: silver;;
+color: black;;
+border: 1px solid black;
+font-family: 'Roboto', sans-serif;
 }
 
 .grid-ctn {
@@ -119,16 +185,29 @@ color: silver;;
 width: 1400px;
 }
 
+.comics-title{
+font-size: 50px;
+}
+
+.comic-img{
+  height: 150px;
+  width: 100px;
+  box-shadow: 2px 2px 10px black;
+}
+.comic-title{
+  border-bottom: 1px solid black;
+}
 .comics-ctn{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 600px;
+  width: 500px;
   padding: 15px;
   margin: 25px auto;
   border: 2px solid black;
   background-color: antiquewhite;
   box-shadow: 2px 2px 10px black;
+  font-family: 'Roboto', sans-serif;
 }
 .comics-btn {
   background-color: rgb(64, 63, 72);
@@ -147,7 +226,6 @@ width: 1400px;
 .comics-btn :focus{
   outline: none;
 }
-
 .comics-btn :hover {
 border: 5px solid  rgb(227, 0, 0);
 color: rgb(232, 223, 212);
@@ -159,8 +237,141 @@ transition: all 0.2s ease-in;
 } 
 
 /* cart */
+.shopping-cart {
+  width: 750px;
+  height: auto;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.cart-title {
+  height: 60px;
+  border-bottom: 1px solid #E1E8EE;
+  padding: 20px 30px;
+  color: #5E6977;
+  font-size: 18px;
+  font-weight: 400;
+}
 
-.outer-cart-ctn{
+.item {
+  padding: 20px 30px;
+  height: 200px;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+.delete-btn,
+.like-btn {
+  display: inline-block;
+  Cursor: pointer;
+  background-color: white;
+  
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: url('https://image.flaticon.com/icons/svg/1828/1828843.svg') no-repeat center;
+}
+ 
+.like-btn {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  width: 17px;
+  height: 17px;
+  background-size: 2900%;
+  background-repeat: no-repeat;
+}
+.is-active {
+  animation-name: animate;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(28);
+  animation-fill-mode: forwards;
+}
+ 
+@keyframes animate {
+  0%   { background-position: left;  }
+  50%  { background-position: right; }
+  100% { background-position: right; }
+}
+
+.cart-image {
+  margin-right: 50px;
+  height: 125px;
+  width: 100px;
+  border: 2px solid black;
+}
+ 
+.description {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+  height: 100px;
+}
+ 
+.description span {
+  display: block;
+  font-size: 14px;
+  color: #43484D;
+  font-weight: 400;
+  margin: 8px;
+}
+.quantity {
+  padding-top: 20px;
+  margin-right: 60px;
+}
+.quantity input {
+  -webkit-appearance: none;
+  border: none;
+  text-align: center;
+  height: 35px;
+  width: 32px;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+ 
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+.plus-btn {
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+}
+ 
+button:focus,
+input:focus {
+  outline:0;
+}
+.price {
+  width: 83px;
+  padding-top: 27px;
+  text-align: center;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+/* .outer-cart-ctn{
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -178,7 +389,7 @@ transition: all 0.2s ease-in;
 
 .total-ctn{
   display: block;
-}
+} */
 
 /* footer */
 
@@ -194,4 +405,42 @@ transition: all 0.2s ease-in;
   .foot-text{
     color: black;
     font-family: 'Merriweather', serif;
+  }
+
+  @media (max-width: 450px){
+   /* header */
+   #root body {
+    width: 1000px;
+    height: 100%;
+    margin: 0;
+  }
+    .header{
+      width: 1000px;
+    }
+    .navigation li:last-child{
+      padding-right: 10px;
+    }
+
+    /* home page */
+    .grid-ctn {
+      grid-template-columns: auto auto;
+      margin: 0 120px;
+      width: 750px;
+    }
+    .grid-item {
+      width: 300px;
+    }
+
+
+    .footer-ctn{
+    
+      margin: 0 auto;
+    }
+
+    .footer {
+      text-align: center;
+      line-height:24px;
+      width: 1000px;
+      margin-top: 100px;
+      }
   }
