@@ -63,8 +63,8 @@ Mobile view: https://wireframe.cc/LhVJKL
 |Monday, 6/29| Map out project - Project approval | Completed
 |Tuesday, 6/30| Create all my components | Completed
 |Wednesday, 7/1| Set up Api. Creat code for generating comic and character information | Completed
-|Thursday, 7/2| Advanced CSS and clean up code to ensure functionaily | Incomplete
-|Friday, 7/3| Debugging | Incomplete
+|Thursday, 7/2| Advanced CSS and clean up code to ensure functionaily | Completed
+|Friday, 7/3| Debugging | Completed
 |Monday, 7/6| Present project | Not Incomplete
 
 ## SWOT Analysis:
@@ -78,18 +78,28 @@ Mobile view: https://wireframe.cc/LhVJKL
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: | :---: | :---: | :---: |
 | Set up API functionaily | H | 6hr| 6hrs | 6hrs |
-| Create components | H | 5hrs| TDB | TDB |
+| Create components | H | 2hrs| 2hrs | 2hrs |
+| Set up cart functionality | H | 6hrs| 8hrs | 8hrs |
 | Incorporate API info into components  | H | 4hrs | 5hrs | 5hrs |
 | Link components | M | 2hrs | 1hr | 1hr |
-| Set parameters to comics | M | 2hrs | TDB | TDB |
-| Style results | M | 3hrs | TDB | TDB |
-| Advanced CSS | L | 4hrs | TDB | TDB |
-| Style mobile view | L | 4hrs | TDB | TDB |
-| Total | H | 30hrs| TDB | TDB |
+| Set parameters to comics | M | 2hrs | 1hr | 1hr |
+| Style results | M | 3hrs | 4hr | 4hrs |
+| Advanced CSS | L | 4hrs | 4hrs | 4hrs |
+| Style mobile view | L | 4hrs | 3hrs | 3hrs |
+| Total | H | 33hrs| 34hrs | 34hrs |
 
 ## Code Snippet
 ```
+ function addToCart(item) {
+    updateCart([...cart, item])
+  }
 
+  function removeItem(comic) {
+    let index = cart.indexOf(comic)
+    cart.splice(index, 1)
+    updateCart([...cart])
+  }
 ```
 
 ## Change Log
+- Changed characters to only variations of spider-man/spider-girl

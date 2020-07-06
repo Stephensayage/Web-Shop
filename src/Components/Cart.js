@@ -33,12 +33,12 @@ export default function Cart(props) {
             </div>
 
             <div class="quantity">
-              <button class="plus-btn" type="button" name="button">
-                +
+              <button class="plus-cart-btn" type="button" name="button">
+                -
               </button>
               <input type="text" name="name" value="1" />
-              <button class="minus-btn" type="button" name="button">
-                -
+              <button class="minus-cart-btn" type="button" name="button">
+                +
               </button>
             </div>
 
@@ -50,10 +50,10 @@ export default function Cart(props) {
       )}
       <br />
       <div className="total-ctn">
-        <span>Items in cart: {props.cart.length}</span>
+        <span className="items-in-cart">Items in cart: {props.cart.length}</span>
         <br />
-        <span>Subtotal: {trueTotal}</span>
-        <button>Complete Purchase</button>
+        <span className="subtotal">Subtotal: {trueTotal}</span>
+        <button className="complete-purch">Complete Purchase</button>
       </div>
     </div>
   )
