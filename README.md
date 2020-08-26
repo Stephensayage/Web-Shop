@@ -1,4 +1,5 @@
 ## App Title: The WEBshop
+- https://frosty-newton-6c2e34.netlify.app/
 ## App Description: 
 - An ecommerce site that will allow you to add items to your cart and checkout.
 - I will be incorporating Marvel comics as the products available on the app.
@@ -65,7 +66,6 @@ Mobile view: https://wireframe.cc/LhVJKL
 |Wednesday, 7/1| Set up Api. Creat code for generating comic and character information | Completed
 |Thursday, 7/2| Advanced CSS and clean up code to ensure functionaily | Completed
 |Friday, 7/3| Debugging | Completed
-|Monday, 7/6| Present project | Not Incomplete
 
 ## SWOT Analysis:
 - Strengths: I'm starting to understand hooks much better, I think I will try and stick to them throughout the project 
